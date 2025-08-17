@@ -1,0 +1,284 @@
+.job-filters {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.job-filters:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.filters-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.clear-filters {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.clear-filters:hover {
+  color: #333;
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.filter-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filter-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-section h4::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.filter-option:hover {
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateX(2px);
+}
+
+.filter-option input[type="radio"],
+.filter-option input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 16px;
+  height: 16px;
+  accent-color: #000;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex: 1;
+}
+
+.filter-option:hover .filter-label {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Custom radio and checkbox styles */
+.filter-option input[type="radio"]:checked + .filter-label,
+.filter-option input[type="checkbox"]:checked + .filter-label {
+  color: #000;
+  font-weight: 600;
+}
+
+.filter-option:has(input:checked) {
+  background: rgba(0, 0, 0, 0.05);
+  border-left: 2px solid #000;
+  padding-left: 0.375rem;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-action-btn {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #555;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.quick-action-btn:hover {
+  background: #000;
+  color: white;
+  border-color: #000;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .job-filters {
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .job-filters {
+    position: static;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  
+  .filters-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .filter-options {
+    gap: 0.625rem;
+  }
+  
+  .quick-actions {
+    gap: 0.625rem;
+  }
+  
+  .quick-action-btn {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-filters {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+  
+  .filters-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .filters-header h3 {
+    font-size: 1.125rem;
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .filter-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.875rem;
+  }
+  
+  .filter-options {
+    gap: 0.625rem;
+  }
+  
+  .filter-option {
+    padding: 0.375rem;
+  }
+  
+  .filter-option input[type="radio"],
+  .filter-option input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.625rem;
+  }
+  
+  .filter-label {
+    font-size: 0.85rem;
+  }
+  
+  .quick-actions {
+    gap: 0.625rem;
+  }
+  
+  .quick-action-btn {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-filters {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .filters-header h3 {
+    font-size: 1rem;
+  }
+  
+  .filter-section h4 {
+    font-size: 0.9rem;
+  }
+  
+  .filter-label {
+    font-size: 0.8rem;
+  }
+  
+  .quick-action-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
